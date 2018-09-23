@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 **Тема домашнего задания**
 Компоненты React - Components Lifecycle, State & Props
 
@@ -16,6 +15,3 @@ https://tuhub.ru/posts/redux-i-thunk-vmeste-react-rukovodstvo-dlya-chajnikov
 https://www.npmjs.com/package/prop-types
 https://www.apixu.com/my/#
 
-=======
-# sablin-igor-otus-weather
->>>>>>> Stashed changes
