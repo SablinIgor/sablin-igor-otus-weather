@@ -1,0 +1,17 @@
+.App {
+  display: grid;
+  grid-template-areas: "Finder FavoriteList"
+                       "Weather  FavoriteList";
+}
+
+.App > .Finder {
+  grid-area: Finder;
+}
+
+.App > .Weather {
+  grid-area: Weather;
+}
+
+.App > .FavoriteList {
+  grid-area: FavoriteList;
+}
