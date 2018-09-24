@@ -20,7 +20,7 @@ class Finder extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.weatherGetData('http://api.apixu.com/v1/current.json?key=ef5d03b40b984087bc8135539182209&q=' + this.state.value);
+    this.props.weatherGetData(this.state.value);
   }
 
     render() {

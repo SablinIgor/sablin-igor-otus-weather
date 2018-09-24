@@ -57,7 +57,7 @@ function mapStateToProps (state) {
 
 const mapDispatchToProps = dispatch => {
   return {
-    weatherGetDataAction: (url) => dispatch(weatherGetData(url)),
+    weatherGetDataAction: (city) => dispatch(weatherGetData(city)),
     addFavoritesAction: (city) => dispatch(addFavorites(city))
   };
 };

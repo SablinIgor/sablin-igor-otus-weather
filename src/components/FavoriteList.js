@@ -12,7 +12,7 @@ const FavoriteList = ({ favorites, weatherGetData }) => (
         <FavoriteCity
           city={favorite}
           key={favorite}
-          onClick={() => weatherGetData('http://api.apixu.com/v1/current.json?key=ef5d03b40b984087bc8135539182209&q=' + favorite)}
+          onClick={() => weatherGetData(favorite)}
         />
       )}
     </ul>
