@@ -13,5 +13,7 @@ https://maxfarseer.gitbooks.io/redux-course-ru/content/konteineri_i_komponenti.h
 https://alligator.io/react/axios-react/
 https://tuhub.ru/posts/redux-i-thunk-vmeste-react-rukovodstvo-dlya-chajnikov
 https://www.npmjs.com/package/prop-types
-https://www.apixu.com/my/#
+https://stackoverflow.com/questions/48378337/create-react-app-not-picking-up-env-files
 
+**API for weather**
+https://www.apixu.com/my/#

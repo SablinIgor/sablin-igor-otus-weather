@@ -1,0 +1,10 @@
+.Weather {
+    background-color: green;
+    padding: 10px;
+}
+
+.CityName {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight:bold;
+}
