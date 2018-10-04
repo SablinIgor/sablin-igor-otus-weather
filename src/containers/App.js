@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { connect } from 'react-redux'
+import { connect  } from 'react-redux'
+import { withRouter } from "react-router";
 
 import { weatherGetData } from '../actions/index';
 import { addFavorites } from '../actions/index';
 
 import Header from '../components/Header'
+import Main from '../components/Main'
 import Finder from '../components/Finder'
 import Weather from '../components/Weather'
 import FavoriteList from "../components/FavoriteList";
@@ -29,6 +31,7 @@ class App extends Component {
 
     return <div className="App">
       <Header/>
+      <Main/>
     </div>;
   }
 }
@@ -50,7 +53,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App))

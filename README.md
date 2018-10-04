@@ -17,3 +17,7 @@ https://stackoverflow.com/questions/48378337/create-react-app-not-picking-up-env
 
 **API for weather**
 https://www.apixu.com/my/#
+
+**Router and Redux**
+https://github.com/ReactTraining/react-router/issues/4671#issuecomment-285320076
+https://stackoverrun.com/ru/q/12257650
