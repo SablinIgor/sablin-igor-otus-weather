@@ -1,12 +1,12 @@
 .App {
   display: grid;
-  grid-template-areas: "Nav Nav"
+  grid-template-areas: "Header Header"
                        "Finder FavoriteList"
                        "Weather  FavoriteList";
 }
 
-.App > .nav {
-  grid-area: Nav;
+.App > .Header {
+  grid-area: Header;
 }
 
 .App > .Finder {

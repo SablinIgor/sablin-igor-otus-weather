@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { weatherGetData } from '../actions/index';
 import { addFavorites } from '../actions/index';
 
+import Header from '../components/Header'
 import Finder from '../components/Finder'
 import Weather from '../components/Weather'
 import FavoriteList from "../components/FavoriteList";
@@ -27,12 +28,7 @@ class App extends Component {
     } = this.props;
 
     return <div className="App">
-      <nav className="nav nav-pills flex-column flex-sm-row">
-        <a className="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
-        <a className="flex-sm-fill text-sm-center nav-link" href="#">Search</a>
-        <a className="flex-sm-fill text-sm-center nav-link" href="#">Favorites</a>
-      </nav>
-
+      <Header/>
     </div>;
   }
 }
