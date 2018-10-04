@@ -27,19 +27,11 @@ class App extends Component {
     } = this.props;
 
     return <div className="App">
-      <Finder
-        weatherGetData={weatherGetDataAction}
-      />
-      <FavoriteList
-        favorites={ favorites }
-        weatherGetData={ weatherGetDataAction }
-      />
-      <Weather
-        hasErrored={hasErrored}
-        isLoading={isLoading}
-        weatherInfo={weatherInfo}
-        addFavorites={addFavoritesAction}
-      />
+      <nav className="nav nav-pills flex-column flex-sm-row">
+        <a className="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
+        <a className="flex-sm-fill text-sm-center nav-link" href="#">Search</a>
+        <a className="flex-sm-fill text-sm-center nav-link" href="#">Favorites</a>
+      </nav>
 
     </div>;
   }
