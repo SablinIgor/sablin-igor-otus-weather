@@ -57,7 +57,7 @@ class Search extends Component {
           { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" href="#">Show weather</a>)}
         </div>
         <div className={"row"}>
-          <div id="test">
+          <div id="mapSearch">
             { this.state.mapCenter && (
               <MapWithAMarker
                 containerElement={<div style={{ height: "400px" }} />}
