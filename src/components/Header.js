@@ -6,10 +6,14 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <nav className="nav nav-pills flex-column flex-sm-row">
-          <Link to='/' className="flex-sm-fill text-sm-center nav-link active">Home</Link>
-          <Link to='/city' className="flex-sm-fill text-sm-center nav-link">Search</Link>
-          <Link to='/favorites' className="flex-sm-fill text-sm-center nav-link">Favorites</Link>
+        <nav>
+          <div className="row">
+                <ul className="main-nav">
+                  <li><Link to='/'>Home</Link></li>
+                  <li><Link to='/city'>Search</Link></li>
+                  <li><a href="#cities">Favorites</a></li>
+                </ul>
+          </div>
         </nav>
       </div>
     );

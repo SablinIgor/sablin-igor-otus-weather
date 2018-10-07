@@ -21,3 +21,11 @@ https://www.apixu.com/my/#
 **Router and Redux**
 https://github.com/ReactTraining/react-router/issues/4671#issuecomment-285320076
 https://stackoverrun.com/ru/q/12257650
+
+**Geo**
+https://www.youtube.com/watch?v=-QQnzDVcTCo
+https://github.com/ubilabs/react-geosuggest
+
+https://www.youtube.com/watch?v=xLlIgokKiLc&index=66&list=PLN3n1USn4xlnfJIQBa6bBjjiECnk6zL6s&t=0s
+https://github.com/tomchentw/react-google-maps
+

@@ -9,6 +9,7 @@ import { addFavorites } from '../actions/index';
 
 import Header from '../components/Header'
 import Main from '../components/Main'
+
 import Finder from '../components/Finder'
 import Weather from '../components/Weather'
 import FavoriteList from "../components/FavoriteList";
