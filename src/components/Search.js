@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import Geosuggest from 'react-geosuggest';
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
-import './Search.css';
 import './geo.css';
+import './Search.css';
+
 
 const MapWithAMarker = withGoogleMap(props =>
   <GoogleMap
@@ -29,17 +30,22 @@ class Search extends Component {
   }
 
   onSuggestSelect(suggest) {
-    console.log(suggest);
-    this.setState({
-      mapCenter: {
-        lat: suggest.location.lat,
-        lng: suggest.location.lng
-      }})
+    if(suggest) {
+      this.setState({
+        mapCenter: {
+          lat: suggest.location.lat,
+          lng: suggest.location.lng
+        }
+      })
+    }
+    else {
+      this.setState({
+        mapCenter: null
+      })
+    }
   }
 
   render() {
-    console.log('render');
-    console.log(this.state.mapCenter);
     return (
       <div className="Search">
         <div className={"row"}>
@@ -48,9 +54,10 @@ class Search extends Component {
               placeholder="Search places"
               onSuggestSelect={this.onSuggestSelect}
             />
+          { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" href="#">Show weather</a>)}
         </div>
         <div className={"row"}>
-          <div id={"test"}>
+          <div id="test">
             { this.state.mapCenter && (
               <MapWithAMarker
                 containerElement={<div style={{ height: "400px" }} />}
@@ -58,6 +65,7 @@ class Search extends Component {
                 mapCenter={this.state.mapCenter}
           />)}
           </div>
+          { this.state.mapCenter && (<a id="btnAddFavorite" className="btn btn-full" href="#">Add to Favarites</a>)}
         </div>
       </div>
 
