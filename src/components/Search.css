@@ -13,11 +13,23 @@
     color: black;
 }
 
+.geosuggest {
+    display: inline-block;
+    margin-left: 20%;
+}
+
+#btnShowWeather {
+    margin-left: 50px;
+}
+
+#btnAddFavorite {
+    margin-left: 50px;
+}
+
 #test {
     color: white;
     font-size: 1rem;
-    position: relative;
     width: 50%;
-    margin: 1em auto;
-    text-align: left;
+    margin-left: 20%;
+    float: left;
 }
