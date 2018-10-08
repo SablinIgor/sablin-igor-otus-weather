@@ -23,10 +23,18 @@ class Search extends Component {
     super(props);
 
     this.state = {
-      mapCenter: null
+      mapCenter: null,
+      cityName: null
     };
 
     this.onSuggestSelect = this.onSuggestSelect.bind(this);
+    this.onClickWeatherBtn = this.onClickWeatherBtn.bind(this);
+  }
+
+  onClickWeatherBtn(event, cityName){
+    event.preventDefault()
+    this.props.history.push('/city/' + cityName)
+    console.log('City: ' + cityName)
   }
 
   onSuggestSelect(suggest) {
@@ -35,7 +43,8 @@ class Search extends Component {
         mapCenter: {
           lat: suggest.location.lat,
           lng: suggest.location.lng
-        }
+        },
+        cityName: suggest.label.split(',')[0]
       })
     }
     else {
@@ -54,7 +63,7 @@ class Search extends Component {
               placeholder="Search places"
               onSuggestSelect={this.onSuggestSelect}
             />
-          { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" href="#">Show weather</a>)}
+          { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" onClick={(e) => this.onClickWeatherBtn(e, this.state.cityName)} href="#">Show weather</a>)}
         </div>
         <div className={"row"}>
           <div id="mapSearch">

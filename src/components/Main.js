@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../components/Home'
 import Search from '../components/Search'
 import FavoriteList from '../components/FavoriteList'
+import Weather from "./Weather";
 
 class Main extends Component {
   render() {
@@ -11,7 +12,8 @@ class Main extends Component {
       <main className="Main">
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/city' component={Search}/>
+          <Route exact path='/city' component={Search} />
+          <Route path='/city/:name' component={Weather}/>
           <Route path='/favorites' component={FavoriteList}/>
         </Switch>
       </main>
