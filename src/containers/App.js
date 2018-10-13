@@ -9,9 +9,8 @@ import { addFavorites } from '../actions/index';
 
 import Header from '../components/Header'
 
-import Finder from '../components/Finder'
 import Weather from '../components/Weather'
-import FavoriteList from "../components/FavoriteList";
+import FavoriteList from "./FavoriteList";
 import {Route, Switch} from "react-router-dom";
 import Home from "../components/Home";
 import Search from "../components/Search";

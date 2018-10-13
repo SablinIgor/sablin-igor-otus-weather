@@ -11,7 +11,7 @@ class Header extends Component {
                 <ul className="main-nav">
                   <li><Link to='/'>Home</Link></li>
                   <li><Link to='/city'>Search</Link></li>
-                  <li><a href="#cities">Favorites</a></li>
+                  <li><Link to="favorites">Favorites</Link></li>
                 </ul>
           </div>
         </nav>

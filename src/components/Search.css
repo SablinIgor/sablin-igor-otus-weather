@@ -3,6 +3,7 @@
     width: 1140px;
     top: 20%;
     color: black;
+    overflow: hidden;
 }
 
 #labelCity {
