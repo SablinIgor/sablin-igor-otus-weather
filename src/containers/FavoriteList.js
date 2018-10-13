@@ -6,6 +6,16 @@ import FavoriteCity from '../components/FavoriteCity'
 
 class FavoriteList extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.getCity = this.getCity.bind(this);
+  }
+
+  getCity(city) {
+    this.props.history.push('/city/' + city)
+  }
+
   render() {
     return (
       <div className="FavoriteList">
@@ -16,6 +26,7 @@ class FavoriteList extends Component {
               <FavoriteCity
                 city={favorite}
                 key={favorite}
+                onClick={() => this.getCity(favorite)}
               />
             )}
           </ul>
