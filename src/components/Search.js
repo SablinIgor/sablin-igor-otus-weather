@@ -34,7 +34,6 @@ class Search extends Component {
   onClickWeatherBtn(event, cityName){
     event.preventDefault()
     this.props.history.push('/city/' + cityName)
-    console.log('City: ' + cityName)
   }
 
   onSuggestSelect(suggest) {

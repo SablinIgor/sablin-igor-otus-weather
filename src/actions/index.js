@@ -12,7 +12,7 @@ export function weatherGetData(city) {
   return (dispatch) => {
     dispatch(weatherIsLoading(true));
 
-    let url = process.env.REACT_APP_WEATHER_API_URL + '?key=' + process.env.REACT_APP_WEATHER_API_KEY + '&q=' + city;
+    let url = process.env.REACT_APP_WEATHER_API_URL + '?key=' + process.env.REACT_APP_WEATHER_API_KEY + '&q=' + city + '&days=7';
 
     axios.get(url)
       .then(res => {

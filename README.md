@@ -14,6 +14,7 @@ https://alligator.io/react/axios-react/
 https://tuhub.ru/posts/redux-i-thunk-vmeste-react-rukovodstvo-dlya-chajnikov
 https://www.npmjs.com/package/prop-types
 https://stackoverflow.com/questions/48378337/create-react-app-not-picking-up-env-files
+https://tproger.ru/translations/how-css-flexbox-works/
 
 **API for weather**
 https://www.apixu.com/my/#
@@ -28,4 +29,5 @@ https://github.com/ubilabs/react-geosuggest
 
 https://www.youtube.com/watch?v=xLlIgokKiLc&index=66&list=PLN3n1USn4xlnfJIQBa6bBjjiECnk6zL6s&t=0s
 https://github.com/tomchentw/react-google-maps
+
 
