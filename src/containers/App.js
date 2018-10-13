@@ -36,7 +36,10 @@ class App extends Component {
       <Header/>
       <Switch>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/city' component={Search} />
+        <Route
+          exact path='/city'
+          render={(props) => <Search {...props} addFavorites={addFavoritesAction} />}
+        />
         <Route
           path='/city/:name'
           render={(props) => <Weather {...props} weatherGetData={weatherGetDataAction} />}
