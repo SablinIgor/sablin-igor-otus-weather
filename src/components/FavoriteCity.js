@@ -3,12 +3,13 @@ import './FavoriteCity.css';
 import PropTypes from "prop-types";
 
 const FavoriteCity = ({ city, onClick }) => (
-  <li
-    className="FavoriteCity"
+  <a
+    className="btn btn-full"
     onClick={onClick}
+    href="#"
   >
     {city}
-  </li>
+  </a>
 );
 
 FavoriteCity.propTypes = {

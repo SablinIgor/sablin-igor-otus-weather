@@ -20,7 +20,7 @@ class FavoriteList extends Component {
     return (
       <div className="FavoriteList">
         <h2>Favorites City</h2>
-        <div>
+        <div className={"row"}>
           <ul>
             {this.props.favorites.map(favorite =>
               <FavoriteCity
