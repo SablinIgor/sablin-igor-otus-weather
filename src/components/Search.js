@@ -77,6 +77,7 @@ class Search extends Component {
                                       id="btnAddFavorite"
                                       className="btn btn-full"
                                       onClick={() => this.props.addFavorites(this.state.cityName)}
+                                      href="#"
                                       >Add to Favarites</a>)}
         </div>
       </div>
