@@ -4,14 +4,11 @@ import { WEATHER_GET_DATA_SUCCESS } from "../constants/action-types";
 import { ADD_FAVORITES } from "../constants/action-types";
 import { REMOVE_FAVORITES } from "../constants/action-types";
 
-const initialState = {
-  hasErrored: false,
-  isLoading: false,
-  weatherInfo: {},
-  favorites: []
-};
+import { loadState, saveState } from "./localStorage"
 
-const rootReducer = (state = initialState, action) => {
+const persistedState = loadState()
+
+const rootReducer = (state = persistedState, action) => {
   switch (action.type) {
 
     case WEATHER_HAS_ERRORED:
