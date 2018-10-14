@@ -30,10 +30,15 @@ const rootReducer = (state = persistedState, action) => {
     };
 
     case ADD_FAVORITES:
-      return {
-        ...state,
-        favorites: [...state.favorites, action.newFavirite]
-      };
+
+      let index = state.favorites.findIndex(city => city === action.newFavirite);
+      if(index === -1) {
+        return {
+          ...state,
+          favorites: [...state.favorites, action.newFavirite]
+        };
+      }
+      return state;
 
     case REMOVE_FAVORITES:
       return state;
