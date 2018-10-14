@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect  } from 'react-redux'
 import './Weather.css';
 import WeatherInfo from '../components/WeatherInfo';
-import {addFavorites, weatherGetData} from "../actions";
+import {addFavorites} from "../actions";
 
 class Weather extends Component {
 
@@ -35,7 +35,6 @@ function mapStateToProps (state) {
 
 const mapDispatchToProps = dispatch => {
   return {
-    weatherGetDataAction: (city) => dispatch(weatherGetData(city)),
     addFavoritesAction: (city) => dispatch(addFavorites(city))
   };
 };
