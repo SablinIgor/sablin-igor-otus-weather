@@ -62,7 +62,7 @@ class Search extends Component {
               placeholder="Search places"
               onSuggestSelect={this.onSuggestSelect}
             />
-          { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" onClick={(e) => this.onClickWeatherBtn(e, this.state.cityName)} href="#">Show weather</a>)}
+          { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" onClick={(e) => this.onClickWeatherBtn(e, this.state.cityName)} href="">Show weather</a>)}
         </div>
         <div className={"row"}>
           <div id="mapSearch">
@@ -77,7 +77,7 @@ class Search extends Component {
                                       id="btnAddFavorite"
                                       className="btn btn-full"
                                       onClick={() => this.props.addFavorites(this.state.cityName)}
-                                      href="#"
+                                      href=""
                                       >Add to Favarites</a>)}
         </div>
       </div>

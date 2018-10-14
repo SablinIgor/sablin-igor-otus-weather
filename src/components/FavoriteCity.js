@@ -1,12 +1,11 @@
 import React from 'react';
-import './FavoriteCity.css';
 import PropTypes from "prop-types";
 
 const FavoriteCity = ({ city, onClick }) => (
   <a
     className="btn btn-full"
     onClick={onClick}
-    href="#"
+    href=""
   >
     {city}
   </a>

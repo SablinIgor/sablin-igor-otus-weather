@@ -4,7 +4,7 @@ import { WEATHER_GET_DATA_SUCCESS } from "../constants/action-types";
 import { ADD_FAVORITES } from "../constants/action-types";
 import { REMOVE_FAVORITES } from "../constants/action-types";
 
-import { loadState, saveState } from "./localStorage"
+import { loadState } from "./localStorage"
 
 const persistedState = loadState()
 

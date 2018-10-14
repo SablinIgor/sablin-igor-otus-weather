@@ -15,6 +15,7 @@ https://tuhub.ru/posts/redux-i-thunk-vmeste-react-rukovodstvo-dlya-chajnikov
 https://www.npmjs.com/package/prop-types
 https://stackoverflow.com/questions/48378337/create-react-app-not-picking-up-env-files
 https://tproger.ru/translations/how-css-flexbox-works/
+https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage
 
 **API for weather**
 https://www.apixu.com/my/#

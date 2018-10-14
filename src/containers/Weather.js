@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect  } from 'react-redux'
-import PropTypes from 'prop-types'
 import './Weather.css';
-import WeatherInfo from './WeatherInfo';
+import WeatherInfo from '../components/WeatherInfo';
 import {addFavorites, weatherGetData} from "../actions";
 
 class Weather extends Component {

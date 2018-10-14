@@ -9,7 +9,7 @@ import { addFavorites } from '../actions/index';
 
 import Header from '../components/Header'
 
-import Weather from '../components/Weather'
+import Weather from './Weather'
 import FavoriteList from "./FavoriteList";
 import {Route, Switch} from "react-router-dom";
 import Home from "../components/Home";
@@ -23,12 +23,8 @@ class App extends Component {
   }
 
   render() {
-    const { weatherInfo,
-            weatherGetDataAction,
-            addFavoritesAction,
-            hasErrored,
-            isLoading,
-            favorites
+    const { weatherGetDataAction,
+            addFavoritesAction
     } = this.props;
 
     return <div className="App">
