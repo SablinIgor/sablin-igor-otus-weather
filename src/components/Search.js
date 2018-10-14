@@ -22,9 +22,12 @@ class Search extends Component {
   constructor(props) {
     super(props);
 
+    console.log(props.location.state)
+
     this.state = {
-      mapCenter: null,
-      cityName: null
+      mapCenter: props.location.state === undefined ? null : {  lat: props.location.state.latitude,
+                                                                lng: props.location.state.longitude },
+      cityName: props.location.state.city
     };
 
     this.onSuggestSelect = this.onSuggestSelect.bind(this);
@@ -60,6 +63,7 @@ class Search extends Component {
             <Geosuggest
               id="city"
               placeholder="Search places"
+              initialValue={this.state.cityName}
               onSuggestSelect={this.onSuggestSelect}
             />
           { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" onClick={(e) => this.onClickWeatherBtn(e, this.state.cityName)} href="">Show weather</a>)}
