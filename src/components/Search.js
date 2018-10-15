@@ -27,7 +27,7 @@ class Search extends Component {
     this.state = {
       mapCenter: props.location.state === undefined ? null : {  lat: props.location.state.latitude,
                                                                 lng: props.location.state.longitude },
-      cityName: props.location.state.city
+      cityName: props.location.state === undefined ? null : props.location.state.city
     };
 
     this.onSuggestSelect = this.onSuggestSelect.bind(this);
