@@ -7,7 +7,7 @@ class WeatherInfo extends Component {
 
     const data = this.props.data;
 
-    var WeatherInfoTemplate = data.map(function(item, index) {
+    const WeatherInfoTemplate = data.map(function(item, index) {
       return (
         <div key={index} className={"WeatherInfo"}>
           <p><i className="ion-ios-person icon-small"></i> {item.date} </p>
