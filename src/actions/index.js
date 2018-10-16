@@ -8,11 +8,13 @@ export const weatherHasErrored = (bool) => ({ type: WEATHER_HAS_ERRORED, hasErro
 export const weatherIsLoading = (bool) => ({ type: WEATHER_IS_LOADING, isLoading: bool});
 export const weatherFetchDataSuccess = (info) => ({ type: WEATHER_GET_DATA_SUCCESS, info });
 
+const urlPrefix = process.env.REACT_APP_WEATHER_API_URL + '?key=' + process.env.REACT_APP_WEATHER_API_KEY + '&days=7' + '&q=';
+
 export function weatherGetData(city) {
   return (dispatch) => {
     dispatch(weatherIsLoading(true));
 
-    let url = process.env.REACT_APP_WEATHER_API_URL + '?key=' + process.env.REACT_APP_WEATHER_API_KEY + '&q=' + city + '&days=7';
+    let url = urlPrefix + city;
 
     axios.get(url)
       .then(res => {
