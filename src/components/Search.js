@@ -64,12 +64,13 @@ class Search extends Component {
                 mapCenter={this.state.mapCenter}
           />)}
           </div>
-          { this.state.mapCenter && (<a
+          { this.state.mapCenter && (<input
+                                      type="submit"
                                       id="btnAddFavorite"
                                       className="btn btn-full"
                                       onClick={() => this.props.addFavorites(this.state.cityName)}
-                                      href=""
-                                      >Add to Favarites</a>)}
+                                      value="Add to Favarites"
+                                      />)}
         </div>
       </div>
 

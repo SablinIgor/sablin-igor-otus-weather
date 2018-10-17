@@ -11,8 +11,13 @@ const SuggestCity = (props) => (
     />
     {
       props.mapCenter && (
-        <a id="btnShowWeather" className="btn btn-full" onClick={(e) => props.onClickWeatherBtn(e, props.cityName)}
-           href="">Show weather</a>)
+        <input
+          type="submit"
+          id="btnShowWeather"
+          className="btn btn-full"
+          onClick={(e) => props.onClickWeatherBtn(e, props.cityName)}
+          value="Show weather"
+        />)
     }
   </div>
 )

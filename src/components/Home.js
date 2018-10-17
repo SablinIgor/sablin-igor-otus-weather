@@ -32,7 +32,12 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>FIND YOUR WEATHER!</h1>
-        <a className="btn btn-full" href="#" onClick={this.onClickLuckyBtn}>I'm Feeling Lucky</a>
+        <input
+          type="submit"
+          className="btn btn-full"
+          value="I'm Feeling Lucky"
+          onClick={this.onClickLuckyBtn}
+        />
       </div>
     );
   }
