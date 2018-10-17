@@ -1,21 +1,10 @@
 import React, {Component} from 'react';
 import Geosuggest from 'react-geosuggest';
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import MapWithAMarker from "./MapWithAMarker"
 
 import './geo.css';
 import './Search.css';
-
-
-const MapWithAMarker = withGoogleMap(props =>
-  <GoogleMap
-    defaultZoom={8}
-    center={props.mapCenter}
-  >
-    <Marker
-      position={props.mapCenter}
-    />
-  </GoogleMap>
-);
 
 class Search extends Component {
 
