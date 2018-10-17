@@ -20,7 +20,6 @@ export function weatherGetData(city) {
       .then(res => {
         const weatherInfo = res.data;
         dispatch(weatherIsLoading(false));
-        dispatch(weatherHasErrored(false));
         dispatch(weatherFetchDataSuccess(weatherInfo))
       })
       .catch(() => dispatch(weatherHasErrored(true)))

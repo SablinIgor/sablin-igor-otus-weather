@@ -20,7 +20,8 @@ const rootReducer = (state = persistedState, action) => {
     case WEATHER_IS_LOADING:
       return {
         ...state,
-        isLoading: action.isLoading
+        isLoading: action.isLoading,
+        hasErrored: false
     };
 
     case WEATHER_GET_DATA_SUCCESS:
