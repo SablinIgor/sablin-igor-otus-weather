@@ -19,9 +19,9 @@ class Weather extends Component {
                                             </i>
           </h2>
 
-          { this.props.weatherInfo.hasOwnProperty("forecast") && <WeatherInfo
-                                                                  data={this.props.weatherInfo.forecast.forecastday}
-                                                                />}
+          <WeatherInfo
+            data={this.props.weatherInfo}
+          />}
         </div>
      )
     }
