@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import Geosuggest from 'react-geosuggest';
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import MapWithAMarker from "./MapWithAMarker"
+import SuggestCity from './SuggestCity'
 
 import './geo.css';
 import './Search.css';
@@ -49,13 +48,12 @@ class Search extends Component {
     return (
       <div className="Search">
         <div className={"row"}>
-            <Geosuggest
-              id="city"
-              placeholder="Search places"
-              initialValue={this.state.cityName}
-              onSuggestSelect={this.onSuggestSelect}
-            />
-          { this.state.mapCenter && (<a id="btnShowWeather" className="btn btn-full" onClick={(e) => this.onClickWeatherBtn(e, this.state.cityName)} href="">Show weather</a>)}
+          <SuggestCity
+            cityName={this.state.cityName}
+            onSuggestSelect={this.onSuggestSelect}
+            mapCenter={this.state.mapCenter}
+            onClickWeatherBtn={this.onClickWeatherBtn}
+          />
         </div>
         <div className={"row"}>
           <div id="mapSearch">
