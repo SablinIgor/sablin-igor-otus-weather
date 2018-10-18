@@ -6,7 +6,7 @@ class WeatherInfo extends Component {
   render() {
 
     const data = this.props.data;
-    let WeatherInfoTemplate = {}
+    let WeatherInfoTemplate = null
 
     if (data.hasOwnProperty("forecast")) {
       WeatherInfoTemplate = data.forecast.forecastday.map(function (item, index) {
@@ -20,10 +20,7 @@ class WeatherInfo extends Component {
         )
       })
     }
-    else
-    {
-      WeatherInfoTemplate = null
-    }
+
     return (
       <div className={"WeatherContainer"}>{WeatherInfoTemplate}</div>
     )
