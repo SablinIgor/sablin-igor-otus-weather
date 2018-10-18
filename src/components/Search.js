@@ -57,12 +57,11 @@ class Search extends Component {
         </div>
         <div className={"row"}>
           <div id="mapSearch">
-            { this.state.mapCenter && (
               <MapWithAMarker
                 containerElement={<div style={{ height: "400px" }} />}
                 mapElement={<div style={{ height: '100%' }} />}
                 mapCenter={this.state.mapCenter}
-          />)}
+              />
           </div>
           { this.state.mapCenter && (<input
                                       type="submit"
