@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import MapWithAMarker from "./MapWithAMarker"
 import SuggestCity from './SuggestCity'
+import AddFavorite from './AddFavorite'
 
 import './geo.css';
 import './Search.css';
@@ -63,13 +64,10 @@ class Search extends Component {
                 mapCenter={this.state.mapCenter}
               />
           </div>
-          { this.state.mapCenter && (<input
-                                      type="submit"
-                                      id="btnAddFavorite"
-                                      className="btn btn-full"
-                                      onClick={() => this.props.addFavorites(this.state.cityName)}
-                                      value="Add to Favarites"
-                                      />)}
+          <AddFavorite
+            show={this.state.mapCenter !== null}
+            addFavorites={() => this.props.addFavorites(this.state.cityName)}
+          />
         </div>
       </div>
 
