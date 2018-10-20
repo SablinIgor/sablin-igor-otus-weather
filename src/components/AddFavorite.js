@@ -7,18 +7,19 @@ class AddFavorite extends Component {
   }
 
   render() {
-    if (this.props.show)
-      return (
-        <input
-          type="submit"
-          id="btnAddFavorite"
-          className="btn btn-full"
-          onClick={this.props.addFavorites}
-          value="Add to Favarites"
-        />
-      )
-    else
-      return null
+    if (!this.props.show) {
+      return null;
+    }
+
+    return (
+      <input
+        type="submit"
+        id="btnAddFavorite"
+        className="btn btn-full"
+        onClick={this.props.addFavorites}
+        value="Add to Favarites"
+      />
+    )
   }
 }
 
