@@ -1,6 +1,6 @@
 .Weather {
-    background-color: green;
     padding: 10px;
+    color: white;
 }
 
 .CityName {
@@ -8,3 +8,9 @@
     margin-right: 10px;
     font-weight:bold;
 }
+
+.icon-fav {
+    color: #e67e22;
+    cursor: pointer;
+}
+

@@ -4,14 +4,11 @@ import { WEATHER_GET_DATA_SUCCESS } from "../constants/action-types";
 import { ADD_FAVORITES } from "../constants/action-types";
 import { REMOVE_FAVORITES } from "../constants/action-types";
 
-const initialState = {
-  hasErrored: false,
-  isLoading: false,
-  weatherInfo: {},
-  favorites: []
-};
+import { loadState } from "./localStorage"
 
-const rootReducer = (state = initialState, action) => {
+const persistedState = loadState()
+
+const rootReducer = (state = persistedState, action) => {
   switch (action.type) {
 
     case WEATHER_HAS_ERRORED:
@@ -23,7 +20,8 @@ const rootReducer = (state = initialState, action) => {
     case WEATHER_IS_LOADING:
       return {
         ...state,
-        isLoading: action.isLoading
+        isLoading: action.isLoading,
+        hasErrored: false
     };
 
     case WEATHER_GET_DATA_SUCCESS:
@@ -33,10 +31,15 @@ const rootReducer = (state = initialState, action) => {
     };
 
     case ADD_FAVORITES:
-      return {
-        ...state,
-        favorites: [...state.favorites, action.newFavirite]
-      };
+
+      let index = state.favorites.findIndex(city => city === action.newFavirite);
+      if(index === -1) {
+        return {
+          ...state,
+          favorites: [...state.favorites, action.newFavirite]
+        };
+      }
+      return state;
 
     case REMOVE_FAVORITES:
       return state;

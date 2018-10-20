@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { connect } from 'react-redux'
+import { connect  } from 'react-redux'
+import { withRouter } from "react-router";
 
 import { weatherGetData } from '../actions/index';
 import { addFavorites } from '../actions/index';
 
-import Finder from '../components/Finder'
-import Weather from '../components/Weather'
-import FavoriteList from "../components/FavoriteList";
+import Header from '../components/Header'
+
+import Weather from './Weather'
+import FavoriteList from "./FavoriteList";
+import {Route, Switch} from "react-router-dom";
+import Home from "../components/Home";
+import Search from "../components/Search";
 
 class App extends Component {
   constructor(props) {
@@ -18,29 +23,25 @@ class App extends Component {
   }
 
   render() {
-    const { weatherInfo,
-            weatherGetDataAction,
-            addFavoritesAction,
-            hasErrored,
-            isLoading,
-            favorites
+    const { weatherGetDataAction,
+            addFavoritesAction
     } = this.props;
 
     return <div className="App">
-      <Finder
-        weatherGetData={weatherGetDataAction}
-      />
-      <FavoriteList
-        favorites={ favorites }
-        weatherGetData={ weatherGetDataAction }
-      />
-      <Weather
-        hasErrored={hasErrored}
-        isLoading={isLoading}
-        weatherInfo={weatherInfo}
-        addFavorites={addFavoritesAction}
-      />
+      <Header/>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route
+          exact path='/city'
+          render={(props) => <Search {...props} addFavorites={addFavoritesAction} />}
+        />
+        <Route
+          path='/city/:name'
+          render={(props) => <Weather {...props} weatherGetData={weatherGetDataAction} />}
+        />
 
+        <Route path='/favorites' component={FavoriteList}/>
+      </Switch>
     </div>;
   }
 }
@@ -62,7 +63,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App))

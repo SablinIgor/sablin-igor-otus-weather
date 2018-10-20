@@ -1,14 +1,14 @@
 import React from 'react';
-import './FavoriteCity.css';
 import PropTypes from "prop-types";
 
 const FavoriteCity = ({ city, onClick }) => (
-  <li
-    className="FavoriteCity"
+  <input
+    type="submit"
+    className="btn btn-full"
     onClick={onClick}
-  >
-    {city}
-  </li>
+    value={city}
+  />
+
 );
 
 FavoriteCity.propTypes = {

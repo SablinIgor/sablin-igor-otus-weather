@@ -1,0 +1,35 @@
+.Search {
+    position: absolute;
+    width: 1140px;
+    top: 20%;
+    color: black;
+}
+
+#labelCity {
+    color: white;
+}
+
+#city {
+    color: black;
+}
+
+.geosuggest {
+    display: inline-block;
+    margin-left: 20%;
+}
+
+#btnShowWeather {
+    margin-left: 50px;
+}
+
+#btnAddFavorite {
+    margin-left: 50px;
+}
+
+#mapSearch {
+    color: white;
+    font-size: 1rem;
+    width: 50%;
+    margin-left: 20%;
+    float: left;
+}
